@@ -1,8 +1,3 @@
-
-import clr
-clr.AddReferenceByName("AnkhBotR2, Version=1.0.2.56, Culture=neutral, PublicKeyToken=null")
-from AnkhBotR2.Windows import BrowserWindow
-
 ScriptName = "BrowserWindow"
 Website = "https://github.com/LuisSanchez-Dev/Streamlabs-Chatbot-BrowserWindow"
 Description = "Add your own websites directly to the app!"
@@ -13,6 +8,8 @@ def ScriptToggled(state):
   return
 
 def Init():
+  global BrowserWindow
+  BrowserWindow = Parent.GetType().Assembly.AnkhBotR2.Windows.BrowserWindow
   return
 
 def Execute(data):
@@ -28,5 +25,5 @@ def Unload():
   return
 
 def OpenReadMe():
-  BrowserWindow("https://www.google.com/","BrowserWindow - Read me").Show()
+  BrowserWindow("https://github.com/LuisSanchez-Dev/Streamlabs-Chatbot-BrowserWindow","BrowserWindow - Read me").Show()
   return
