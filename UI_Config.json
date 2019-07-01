@@ -1,0 +1,10 @@
+{
+    "browserReadMe":{
+      "type": "button",
+      "label": "Open Read Me",
+      "tooltip": "Open read me for information.",
+      "function": "OpenReadMe",
+      "wsevent": "",
+      "group": ""
+    }
+}
